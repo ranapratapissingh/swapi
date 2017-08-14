@@ -1,0 +1,133 @@
+/* //www.menucool.com/jquery-slider */
+
+#thumbnail-slider {
+    margin:0 auto; /*center-aligned*/
+    width:100%;
+    /*max-width:900px;*/
+    max-width:1300px;
+    padding:0;
+    box-sizing:border-box;
+    position:relative;
+    -webkit-user-select: none;
+    user-select:none;
+}
+
+#thumbnail-slider div.inner {    
+    /*the followings should not be changed */
+    position:relative;
+    overflow:hidden;
+    padding:0;
+    margin:0;
+}
+ 
+#thumbnail-slider div.inner ul {    
+    /*the followings should not be changed */
+    white-space:nowrap;
+    position:relative;
+    left:0; top:0;
+    list-style:none;
+    font-size:0;
+    padding:0;
+    margin:0;
+    float:left!important;
+    width:auto!important;
+    height:auto!important;
+}
+
+#thumbnail-slider ul li {
+    display:inline-block;
+    margin-top:20px;
+    margin-bottom:90px;
+    margin-left:-30px; margin-right:-30px; /* Spacing between thumbs*/
+    -webkit-transform:scale(0.9);
+    transform:scale(0.9); /*Note: The scale down will increase the spacing between slides. You can set negative margins as did above to roll back the spacing. */
+    -webkit-transition:-webkit-transform 0.5s;
+    transition:transform 0.5s;
+    box-sizing:content-box;
+    text-align:center;
+    vertical-align:middle;
+    padding:0;
+    position:relative;
+    list-style:none;
+    backface-visibility:hidden;
+    
+	/*-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);*/
+    
+}
+
+#thumbnail-slider ul li.active {
+    -webkit-transform:scale(1.15); 
+    transform:scale(1.15); /*Note: if scale is greater than 1, the margin-top and margin-bottom in the selector "#thumbnail-slider li" must be set with a sufficient value so the enlarged image will be shown within the margins.*/
+    background-color:transparent;
+    max-height: 440px!important;
+	/*-webkit-filter: initial;
+	filter: initial;*/
+}
+
+#thumbnail-slider ul li.active a{max-height: 440px!important; overflow: hidden;}
+
+#thumbnail-slider .thumb {
+    padding: 15px;
+    width:100%;
+    height: 100%;
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center center;
+    display:block;
+    position:absolute;
+    /*font-size:0;*/
+    cursor:inherit;
+    /*-webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(70%, transparent), to(rgba(255,255,255,0.4)));*/
+    transition:all linear 0.4s;
+}
+
+
+/*-- Start 3D --*/
+    #thumbnail-slider ul li .thumb {
+        -webkit-transform: perspective(500px) translateX(1px) translateZ(-30px) rotateY(30deg);
+        transform: perspective(500px) translateX(1px) translateZ(-30px) rotateY(30deg);
+    }
+    #thumbnail-slider ul li.active .thumb {
+        -webkit-transform: perspective(0px)  translateX(0px)translateZ(0px) rotateY(0deg); 
+        transform: perspective(0px)  translateX(0px)translateZ(0px) rotateY(0deg); 
+    }
+    #thumbnail-slider ul li.active ~ li .thumb {
+        -webkit-transform: perspective(500px) translateX(-1px) translateZ(-30px) rotateY(-30deg); 
+        transform: perspective(500px) translateX(-1px) translateZ(-30px) rotateY(-30deg); 
+    }
+/*-- End 3D --*/
+
+/* --------- navigation controls ------- */   
+/* The nav id should be: slider id + ("-prev", "-next", and "-pause-play") */
+
+#thumbnail-slider-pause-play {display:none;} /*.pause*/
+#thumbnail-slider-prev, #thumbnail-slider-next {display:none;}
+
+.featuredXlStry{min-height: 667px; background-repeat:no-repeat; background-size:cover; background-position:50% 50%;  position: relative;}
+.landingHeader .navbar-default .navbar-nav>li>a {color: #fff; text-transform: uppercase;}
+.landingHeader .navbar-default .navbar-nav>li:last-child>a{background-color: #F5595C}
+
+.searchOnLanding{float:none; position: relative;}
+.searchOnLanding input{background:none; box-shadow:none; border:none; border-bottom:2px solid #fff; border-radius:0px;}
+.searchOnLanding input:focus, .searchOnLanding input:active{box-shadow: none; border-color: #fff;}
+.searchOnLanding span.searchBrdrL, .searchOnLanding span.searchBrdrR{height: 15px; border-left:2px solid #fff; position: absolute; bottom: 0px;}
+/*.searchOnLanding span.searchBrdrL{left: 13px;}
+.searchOnLanding span.searchBrdrR{right: 13px;}*/
+.quoteOnlanding{margin: 20px auto 0px; float: none;}
+.quoteOnlanding h2{color: #fff; text-transform: uppercase; font-weight: 700; font-family: 'Lato', sans-serif; font-size: 50px; text-align: center;}
+.quoteOnlanding p{font-size: 28px; text-align: center; color: #fff;}
+.btn_express{margin: auto; float: none;}
+.btn_express a{background: #f5595c;  transition:1s; color: #fff; text-transform: uppercase; border-radius: 3px; font-size: 23px; padding: 18px;border: none;}
+.xlStryWriter{background: rgba(0,0,0,0.6);color: #fff;position: absolute;right: 0;bottom: 0;text-align: left;}
+.xlStryWriter a{display: block; padding: 10px 15px;}
+.userImgOnLanding{width: 60px;height: 60px;display: table-cell;vertical-align: middle;}
+.userImgOnLanding img{display: block;width: 100%;border: solid 3px #464646;background-color: #464646;border-radius: 50%;}
+.userNameOnLanding{display: table-cell;vertical-align: middle;height: 60px;padding-left: 15px;}
+.userNameOnLanding p{margin-bottom: 0px; color: #fff; text-transform: uppercase;}
+
+span.landingStryBackLayr{background: rgba(0, 0, 0, 0.51); position:absolute; top:0px; left:0px; width:100%; height:100%;display:block;}
+.landingStryData{position: absolute;bottom: 15px;white-space: normal;text-align: left;color: #fff;}
+.landingStryData span.CretorDtOnLanding{font-size:10px; text-transform:uppercase;}
+.landingStryMeta span{font-size: 10px; display: inline-block; margin-right: 10px;}
+.landingStryMeta span i, .landingStryData span.CretorDtOnLanding i{font-size: 10px; position: relative; top: 1px;}

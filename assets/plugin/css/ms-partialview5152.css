@@ -1,0 +1,147 @@
+.ms-partialview-template {
+	overflow: hidden;
+	/*min-height: 550px;*/
+	min-height: 487px;
+}
+.ms-partialview-template .ms-view {
+	overflow: visible;
+	background-color: transparent;
+}
+
+.ms-partialview-template .ms-slide {
+	
+}
+
+.ms-partialview-template .ms-caro3d-template {
+	overflow: hidden;
+	margin: 0 auto;
+	padding: 40px 15%;
+}
+
+.ms-partialview-template .ms-slide-info {
+	text-align: center;
+	font-family: "Lato";
+	margin-top: 20px;
+}
+
+.ms-partialview-template .ms-slide-info h3 {
+	margin: 5px;
+	font-weight: 300;
+	font-size: 23pt;
+	/*color: #222;*/
+	color: #fff;
+	line-height: 1.3;
+}
+
+.ms-partialview-template .ms-slide-info h4 {
+	margin: 5px;
+	font-weight: 300;
+	font-size: 12px;
+	/*color: #7A7A7A;*/
+	color: #ccc;
+	text-transform: uppercase;
+}
+
+.ms-partialview-template .ms-slide-info p {
+	font-size: 10pt;
+	margin: 6px;
+	color: #fff;
+}	
+
+/* Layers */
+.ms-layer.video-title {
+    font-family: "Lato",sans-serif;
+    color: white;
+    font-weight: 600;
+    font-size: 42px;
+    margin:0px;
+    letter-spacing:0px;
+}
+
+.ms-layer.video-title.video-top-title {
+    font-size: 16px;
+    color: gray;
+}
+
+.ms-layer.video-title.video-sub-title {
+    font-size: 22px;
+    font-weight: 300;
+}
+
+.stryInfobottm{margin: 15px;}
+.stryInfobottm h4{
+font-size: 45px; text-transform: uppercase;font-family: "museo_sans900",serif; line-height: 1.4;bottom: 50px;position: absolute;}
+
+.bannerStry{
+	position: relative;background-repeat:no-repeat; background-position:50% 50%; background-size:cover; height:667px; display:block;
+}
+.stryInfo{
+	position: absolute;
+	    bottom: 100px; 
+	left: 100px;
+}
+.stryInfo h4{color: #ccc; text-transform: uppercase;font-size: 12px;}
+.stryInfo h3 {margin: 10px auto;font-size: 40px;line-height: 1.3;margin-right: 109px;color: #fff;}
+.stryInfo h3 a{color: #fff;}
+.wittyDt{
+	/*position: absolute;
+	top: 100px;
+	left: 100px;
+	color: #43a047;
+	z-index: 99;
+	background-color: rgba(255,255,255,0.9);
+	padding: 10px 15px;*/
+	position: absolute;
+	width: 32%;
+    top: 60px;left: 70px;;color: #333;
+    z-index: 99;background-color: rgba(255,255,255,0.9);
+    padding: 20px 20px 20px 20px;margin: auto;
+}
+
+.wittyDt h3{
+         margin: 0px;
+    font-size: 31px;
+    letter-spacing: 1.2px;
+    line-height: 1.2;
+    font-family: "museo_sans900",serif;
+    text-transform: uppercase;
+}
+
+.wittyDt p{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: "museo_sans300",serif;
+    letter-spacing: 1px;
+    padding-top: 5px;
+    font-size: 16px;
+}
+.wittyDt p:last-child{
+	display: inline-block;
+	/*padding-bottom: 10px;
+	padding-top: 0px;*/
+}
+
+.carousel-inner>.item{
+	-webkit-transition: .4s ease-in-out left;
+    transition: .4s ease-in-out left;
+}
+
+
+.transition-timer-carousel .transition-timer-carousel-progress-bar {
+   height: 5px;
+   background-color: #5cb85c ;
+   width: 0%;
+   margin: -5px 0px 0px 0px;
+   border: none;
+   z-index: 11;
+   position: relative;
+}
+.transition-timer-carousel .transition-timer-carousel-progress-bar.animate{
+   /* We make the transition time shorter to avoid the slide transitioning
+   before the timer bar is "full" - change the 4.25s here to fit your
+   carousel's transition time */
+   -webkit-transition: width 4.25s linear;
+    -moz-transition: width 4.25s linear;
+    -o-transition: width 4.25s linear;
+    transition: width 4.25s linear;
+}
