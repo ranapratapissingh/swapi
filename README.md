@@ -15,4 +15,7 @@ Technologies which is used - Codeigniter, Javascript, Progressive Web App(PWA), 
 
 Salient Features- Offline First Web App. 
 
-Try it now!
+Try it now! 
+
+
+API help - https://swapi.co/
